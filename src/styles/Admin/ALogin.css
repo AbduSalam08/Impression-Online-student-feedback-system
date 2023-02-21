@@ -1,0 +1,173 @@
+/* form */
+.formWrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  position: relative;
+}
+.formWrapper .form {
+  width: 400px;
+  background: linear-gradient(130deg, #55555535 30%, #43434310);
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.3);
+}
+.form .header {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+.header h2 {
+  color: #eff5ff;
+  margin-right: 10px;
+  letter-spacing: 0.5px;
+}
+.formWrapper img {
+  filter: contrast(1.1) drop-shadow(10px 10px 15px rgb(0, 0, 0, 0.8));
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  object-fit: contain;
+  width: 350px;
+}
+
+.form .inputs {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.inputs .userName,
+.inputs .password {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  background-color: #00000041;
+  border-radius: 4px;
+  padding: 0 5px;
+}
+.inputs .userName input,
+.inputs .password input {
+  width: 90%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 12px 15px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 14px;
+  font-family: "roboto", sans-serif;
+}
+.inputs .userName i,
+.inputs .password i {
+  font-size: 20px;
+  width: 40px;
+  color: #adadad;
+  cursor: pointer;
+}
+.form .formFooter {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.formFooter .submitBtn {
+  /* font-family: "roboto", sans-serif; */
+  padding: 5px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(140deg, #8b9aff, #2e1997);
+}
+.fp {
+  color: #adadad90;
+  font-family: "roboto", sans-serif;
+  font-size: 13px;
+}
+.fp:hover {
+  text-decoration: underline;
+  color: #adadad90;
+}
+.form .oAuth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.oAuth .or {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-weight: bold;
+  color: #55555590;
+}
+.or small {
+  padding: 10px;
+  margin-top: -3px;
+}
+.or span {
+  width: 200px;
+  height: 1px;
+  background-color: #55555590;
+}
+.oAuth .auths {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.auths i {
+  font-size: 20px;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #eff5ff;
+  margin: 10px;
+  border-radius: 50%;
+  background-color: #00000041;
+  cursor: pointer;
+}
+.auths i:hover {
+  transform: scale(1.1);
+}
+.formWrapper .backBtn {
+  position: fixed;
+  top: 20%;
+  left: 5%;
+  font-size: 18px;
+  background-color: #eff5ff0f;
+  color: #696969;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.toastManual {
+  position: fixed;
+  bottom: 5%;
+  right: 3%;
+  font-weight: bold;
+}
+
+/* js utility class */
+/* .makeBlur {
+  filter: blur(20px);
+} */

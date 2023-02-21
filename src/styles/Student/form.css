@@ -1,0 +1,204 @@
+.formWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #fff;
+  position: relative;
+}
+.formWrap form {
+  width: 50%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  margin: 30px 0;
+  margin-top: 10px;
+  border-radius: 10px;
+  /* box-shadow: 0px 3px 40px rgba(0, 0, 0, 0.1); */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+  padding: 35px 50px;
+}
+form .formTitle {
+  width: 100%;
+  margin: 10px 0;
+  background-color: #586df620;
+  padding: 12px 30px;
+  padding-bottom: 3px;
+  border-radius: 8px;
+  border-left: 6px solid #18215b;
+}
+.formTitle h1 {
+  padding-bottom: 0;
+  font-size: 28px;
+  color: #18215b;
+  font-family: "roboto", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+form .formDesc {
+  margin-top: 10px;
+  width: 100%;
+}
+.formDesc p {
+  font-size: 14px;
+  font-family: "roboto", sans-serif;
+  padding: 12px 30px;
+  border-radius: 8px;
+  color: #555555e1;
+  border-left: 6px solid #55555590;
+  background-color: #55555510;
+}
+.formBasicInfo {
+  width: 100%;
+}
+.fld {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 20px 0;
+  background-color: #55555510;
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+.fld p,
+.QWrap .quesT {
+  padding-bottom: 0;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: "roboto", sans-serif;
+}
+.fld input,
+.fld textarea {
+  margin-bottom: 10px;
+  width: 100%;
+  font-size: 14px;
+  padding: 8px 15px;
+  font-family: "roboto", sans-serif;
+  border: 1px solid #adadad60;
+  border-radius: 4px;
+  outline: none;
+}
+.fld textarea {
+  min-height: 100px;
+}
+.fbQues {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+}
+.QWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 20px 0;
+  border: 1px solid #adadad50;
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+.QWrap span,
+.fld span {
+  font-family: "roboto", sans-serif;
+  font-size: 14px;
+}
+.QWrap .options {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #55555510;
+  color: #0f0f0f;
+  padding: 8px 30px;
+  border-radius: 4px;
+  width: 200px;
+  margin: 5px 0;
+}
+.QWrap .quesT {
+  margin-bottom: 15px;
+}
+.options span {
+  font-size: 14px;
+  font-family: "roboto", sans-serif;
+  margin-left: 20px;
+}
+.formFooter {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.submitForm,
+.resetForm {
+  background-color: #334ae4;
+  color: #eff5ff;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  width: 100px;
+  padding: 6px 0;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  margin-left: 20px;
+}
+.resetForm {
+  width: 150px;
+  background-color: rgba(255, 0, 0, 0.1);
+  color: darkred;
+}
+.options input[type="radio"] {
+  position: relative;
+  appearance: none;
+}
+.options input[type="radio"]::before {
+  content: "";
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.options input[type="radio"]::after {
+  content: "";
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 1);
+}
+.options input[type="radio"]:checked::after {
+  opacity: 1;
+}
+.formWrap .backBtn {
+  position: absolute !important;
+  top: 1%;
+  left: 6%;
+  font-size: 18px;
+  background-color: #55555525;
+  color: #3d3d3d;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
