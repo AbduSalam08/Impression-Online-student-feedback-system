@@ -29,6 +29,7 @@ const History = (props) => {
 
   //delete response
   const dltResponse = (id) => {
+    // console.log(Questions[id - 1]);
     let result = axios
       .patch(`http://localhost:4000/Questions/${id}`, {
         Your_Name: {
@@ -53,51 +54,50 @@ const History = (props) => {
         },
         completed: false,
         que1: {
-          que: Questions[id].que1.que,
-          options: Questions[id].que1.options,
-          ansType: Questions[id].que1.ansType,
+          que: Questions[id - 1].que1.que,
+          options: Questions[id - 1].que1.options,
+          ansType: Questions[id - 1].que1.ansType,
           answer: "",
-          key: Questions[id].que1.key,
+          key: Questions[id - 1].que1.key,
         },
         que2: {
-          que: Questions[id].que2.que,
-          options: Questions[id].que2.options,
-          ansType: Questions[id].que2.ansType,
+          que: Questions[id - 1].que2.que,
+          options: Questions[id - 1].que2.options,
+          ansType: Questions[id - 1].que2.ansType,
           answer: "",
-          key: Questions[id].que2.key,
+          key: Questions[id - 1].que2.key,
         },
         que3: {
-          que: Questions[id].que3.que,
-          options: Questions[id].que3.options,
-          ansType: Questions[id].que3.ansType,
+          que: Questions[id - 1].que3.que,
+          options: Questions[id - 1].que3.options,
+          ansType: Questions[id - 1].que3.ansType,
           answer: "",
-          key: Questions[id].que3.key,
+          key: Questions[id - 1].que3.key,
         },
         que4: {
-          que: Questions[id].que4.que,
-          options: Questions[id].que4.options,
-          ansType: Questions[id].que4.ansType,
+          que: Questions[id - 1].que4.que,
+          options: Questions[id - 1].que4.options,
+          ansType: Questions[id - 1].que4.ansType,
           answer: "",
-          key: Questions[id].que4.key,
+          key: Questions[id - 1].que4.key,
         },
         que5: {
-          que: Questions[id].que5.que,
-          options: Questions[id].que5.options,
-          ansType: Questions[id].que5.ansType,
+          que: Questions[id - 1].que5.que,
+          options: Questions[id - 1].que5.options,
+          ansType: Questions[id - 1].que5.ansType,
           answer: "",
-          key: Questions[id].que5.key,
+          key: Questions[id - 1].que5.key,
         },
         additional: {
-          que: Questions[id].additional.que,
-          ansType: Questions[id].additional.ansType,
+          que: Questions[id - 1].additional.que,
+          ansType: Questions[id - 1].additional.ansType,
           answer: "",
         },
       })
-      .then((res) => res.data);
+      .then((res) => console.log(res.data));
     setTimeout(() => {
       navigate("/Dashboard/Active_Feedbacks");
     }, 1000);
-    console.log(result);
   };
 
   return (
@@ -130,20 +130,21 @@ const History = (props) => {
                 completedData &&
                 completedData.map((e, i) => {
                   return (
-                    <tr key={i}>
+                    <tr key={i} id={e.id}>
                       <td>{e.Feedback_title}</td>
                       <td>{e.date}</td>
                       <td>05</td>
                       <td>Completed</td>
                       <td>
-                        <Link to={`View_response/${i + 1}`}>
+                        <Link to={`View_response/${e.id}`}>
                           <i className="fa fa-eye" title="View my response"></i>
                         </Link>
                         <i
                           className="fa fa-trash"
                           title="Delete my response"
                           onClick={() => {
-                            dltResponse(i + 1);
+                            let curid = e.id;
+                            dltResponse(curid);
                           }}
                         ></i>
                       </td>

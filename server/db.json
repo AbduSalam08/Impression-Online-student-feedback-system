@@ -308,12 +308,12 @@
       },
       "Email_ID": {
         "que": "Email ID",
-        "ansType": "email",
+        "ansType": "text",
         "answer": ""
       },
       "Department_branch": {
-        "que": "Department / Branch",
-        "ansType": "text",
+        "que": "Department branch",
+        "ansType": "false",
         "answer": ""
       },
       "Section": {
