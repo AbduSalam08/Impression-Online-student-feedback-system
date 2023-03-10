@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../styles/Student/dashboard.css";
 import Aos from "aos";
 import { useNavigate } from "react-router-dom";
-const Dashboard = ({ Questions, usersData }) => {
+const Dashboard = ({ QuestionsData, UsData }) => {
+  const [Questions, setQuestions] = useState(QuestionsData);
+  const [usersData, setUsersData] = useState(UsData);
+
   Aos.init();
   const navigate = useNavigate();
   //logout
@@ -21,7 +24,7 @@ const Dashboard = ({ Questions, usersData }) => {
         >
           <div className="lhs">
             <p className="title">Active</p>
-            <h1 className="count">{Questions.length}</h1>
+            <h1 className="count">{Questions && Questions.length}</h1>
             <p className="info">Total active feedbacks available for you</p>
           </div>
           <div className="rhs">
@@ -32,7 +35,8 @@ const Dashboard = ({ Questions, usersData }) => {
           <div className="lhs">
             <p className="title">Pending</p>
             <h1 className="count">
-              {Questions.filter((e) => e.completed == false).length}
+              {Questions &&
+                Questions.filter((e) => e.completed == false).length}
             </h1>
             <p className="info">Total Pending feedbacks from your list</p>
           </div>
@@ -48,7 +52,7 @@ const Dashboard = ({ Questions, usersData }) => {
           <div className="lhs">
             <p className="title">Completed</p>
             <h1 className="count">
-              {Questions.filter((e) => e.completed == true).length}
+              {Questions && Questions.filter((e) => e.completed == true).length}
             </h1>
             <p className="info">Total completed feedbacks from your list</p>
           </div>
@@ -62,17 +66,18 @@ const Dashboard = ({ Questions, usersData }) => {
         <div className="recent" data-aos="fade-up" data-aos-duration="650">
           <p className="header">Recent Activities</p>
           <div className="rowSection">
-            {Questions.map((e, id) => (
-              <div className="r" key={id}>
-                <p className="rv">
-                  <i className="fa fa-check-circle"></i>
-                  {e.Feedback_title}
-                </p>
-                <p className="rv">
-                  {e.completed == true ? "Completed" : "Pending"}
-                </p>
-              </div>
-            ))}
+            {Questions &&
+              Questions.map((e, id) => (
+                <div className="r" key={id}>
+                  <p className="rv">
+                    <i className="fa fa-check-circle"></i>
+                    {e.Feedback_title}
+                  </p>
+                  <p className="rv">
+                    {e.completed == true ? "Completed" : "Pending"}
+                  </p>
+                </div>
+              ))}
           </div>
         </div>
         <div className="profile" data-aos="fade-up" data-aos-duration="700">

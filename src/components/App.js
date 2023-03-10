@@ -75,7 +75,7 @@ function App() {
       children: [
         {
           index: true,
-          element: <Dashboard Questions={Questions} usersData={usersData} />,
+          element: <Dashboard QuestionsData={Questions} UsData={usersData} />,
           errorElement: <PageNotFound />,
         },
         {
