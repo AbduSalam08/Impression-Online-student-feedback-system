@@ -29,7 +29,7 @@ const History = (props) => {
 
   //delete response
   const dltResponse = (id) => {
-    // console.log(Questions[id - 1]);
+    let currentQues = Questions[id - 1];
     let result = axios
       .patch(`http://localhost:4000/Questions/${id}`, {
         Your_Name: {
@@ -54,47 +54,47 @@ const History = (props) => {
         },
         completed: false,
         que1: {
-          que: Questions[id - 1].que1.que,
-          options: Questions[id - 1].que1.options,
-          ansType: Questions[id - 1].que1.ansType,
+          que: currentQues.que1.que,
+          options: currentQues.que1.options,
+          ansType: currentQues.que1.ansType,
           answer: "",
-          key: Questions[id - 1].que1.key,
+          key: currentQues.que1.key,
         },
         que2: {
-          que: Questions[id - 1].que2.que,
-          options: Questions[id - 1].que2.options,
-          ansType: Questions[id - 1].que2.ansType,
+          que: currentQues.que2.que,
+          options: currentQues.que2.options,
+          ansType: currentQues.que2.ansType,
           answer: "",
-          key: Questions[id - 1].que2.key,
+          key: currentQues.que2.key,
         },
         que3: {
-          que: Questions[id - 1].que3.que,
-          options: Questions[id - 1].que3.options,
-          ansType: Questions[id - 1].que3.ansType,
+          que: currentQues.que3.que,
+          options: currentQues.que3.options,
+          ansType: currentQues.que3.ansType,
           answer: "",
-          key: Questions[id - 1].que3.key,
+          key: currentQues.que3.key,
         },
         que4: {
-          que: Questions[id - 1].que4.que,
-          options: Questions[id - 1].que4.options,
-          ansType: Questions[id - 1].que4.ansType,
+          que: currentQues.que4.que,
+          options: currentQues.que4.options,
+          ansType: currentQues.que4.ansType,
           answer: "",
-          key: Questions[id - 1].que4.key,
+          key: currentQues.que4.key,
         },
         que5: {
-          que: Questions[id - 1].que5.que,
-          options: Questions[id - 1].que5.options,
-          ansType: Questions[id - 1].que5.ansType,
+          que: currentQues.que5.que,
+          options: currentQues.que5.options,
+          ansType: currentQues.que5.ansType,
           answer: "",
-          key: Questions[id - 1].que5.key,
+          key: currentQues.que5.key,
         },
         additional: {
-          que: Questions[id - 1].additional.que,
-          ansType: Questions[id - 1].additional.ansType,
+          que: currentQues.additional.que,
+          ansType: currentQues.additional.ansType,
           answer: "",
         },
       })
-      .then((res) => console.log(res.data));
+      .then((res) => res.data);
     setTimeout(() => {
       navigate("/Dashboard/Active_Feedbacks");
     }, 1000);

@@ -81,22 +81,14 @@
       },
       "que4": {
         "que": "4. Are you satisfied with the teaching staff and their teaching practices?",
-        "options": [
-          "Yes",
-          "No"
-        ],
+        "options": ["Yes", "No"],
         "ansType": "radio",
         "answer": "",
         "key": "q4"
       },
       "que5": {
         "que": "5. Do you think your siblings or friends will be benefited by studying at this college?",
-        "options": [
-          "Yes",
-          "No",
-          "Not so much",
-          "Can't say"
-        ],
+        "options": ["Yes", "No", "Not so much", "Can't say"],
         "ansType": "radio",
         "answer": "",
         "key": "q5"
@@ -175,22 +167,14 @@
       },
       "que4": {
         "que": "4. Are you satisfied with the teaching staff and their teaching practices?",
-        "options": [
-          "Yes",
-          "No"
-        ],
+        "options": ["Yes", "No"],
         "ansType": "radio",
         "answer": "",
         "key": "q4"
       },
       "que5": {
         "que": "5. Do you think your siblings or friends will be benefited by studying at this college?",
-        "options": [
-          "Yes",
-          "No",
-          "Not so much",
-          "Can't say"
-        ],
+        "options": ["Yes", "No", "Not so much", "Can't say"],
         "ansType": "radio",
         "answer": "",
         "key": "q5"
@@ -269,11 +253,7 @@
       },
       "que4": {
         "que": "4. Given a chance, are you willing to pursue another course at the college?",
-        "options": [
-          "Yes",
-          "No",
-          "Can't say"
-        ],
+        "options": ["Yes", "No", "Can't say"],
         "ansType": "radio",
         "answer": "",
         "key": "q4"
@@ -363,24 +343,14 @@
       },
       "que4": {
         "que": "4. What motivates you to learn more?",
-        "options": [
-          "Questions",
-          "Assignments",
-          "Sports",
-          "Dolis",
-          "Others"
-        ],
+        "options": ["Questions", "Assignments", "Sports", "Dolis", "Others"],
         "ansType": "radio",
         "answer": "",
         "key": "q4"
       },
       "que5": {
         "que": "5. Do you think that the College provides you with adequate sports facilities?",
-        "options": [
-          "Yes",
-          "No",
-          "Not Always"
-        ],
+        "options": ["Yes", "No", "Not Always"],
         "ansType": "radio",
         "answer": "",
         "key": "q5"
