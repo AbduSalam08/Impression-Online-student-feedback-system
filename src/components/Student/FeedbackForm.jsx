@@ -46,27 +46,24 @@ const FeedbackForm = () => {
   const onSubmitHandler = (e) => {
     e.preventDefault();
 
-    var letters = /^[A-Za-z]+$/;
+    // regex
+    // var letters = /^[A-Za-z]+$/;
 
     //options checkes or not
-    let optVals = document.querySelectorAll(".optionValue");
+    // let optVals = document.querySelectorAll(".optionValue");
 
     // validation
     if (
-      !Your_Name.match(letters) ||
-      Email_ID.length == 0 ||
-      !Section.match(letters) ||
-      !Department_branch.match(letters) ||
-      q1.length == 0 ||
-      q2.length == 0 ||
-      q3.length == 0 ||
-      q4.length == 0 ||
-      q5.length == 0
+      Your_Name.length != 0 &&
+      Email_ID.length != 0 &&
+      Section.length != 0 &&
+      Department_branch.length != 0 &&
+      q1.length != 0 &&
+      q2.length != 0 &&
+      q3.length != 0 &&
+      q4.length != 0 &&
+      q5.length != 0
     ) {
-      setToastFlag(true);
-      setToastType("danger");
-      setErrorText("Please fill out all the fields ! ");
-    } else {
       setToastFlag(true);
       setToastType("primary");
       setErrorText("Feedback Submitted 🎉 !");
@@ -142,6 +139,10 @@ const FeedbackForm = () => {
       setTimeout(() => {
         navigate("/Dashboard/Active_Feedbacks");
       }, 1000);
+    } else {
+      setToastFlag(true);
+      setToastType("danger");
+      setErrorText("Please fill out all the fields ! ");
     }
   };
 
@@ -156,7 +157,7 @@ const FeedbackForm = () => {
     setq3("");
     setq4("");
     setq5("");
-    sugg("");
+    setSugg("");
   };
 
   return (

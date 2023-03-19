@@ -108,22 +108,22 @@
       "Your_Name": {
         "que": "Your name",
         "ansType": "text",
-        "answer": ""
+        "answer": "Abdul Salam"
       },
       "Email_ID": {
         "que": "Email ID",
         "ansType": "text",
-        "answer": ""
+        "answer": "salam@xyz.com"
       },
       "Department_branch": {
         "que": "Department branch",
         "ansType": "text",
-        "answer": ""
+        "answer": "BCA"
       },
       "Section": {
         "que": "Section",
         "ansType": "text",
-        "answer": ""
+        "answer": "A"
       },
       "College": "IT DOOD Arts & Science College",
       "que1": {
@@ -136,7 +136,7 @@
           "Very dissatisfied"
         ],
         "ansType": "radio",
-        "answer": "",
+        "answer": "Satisfied",
         "key": "q1"
       },
       "que2": {
@@ -149,7 +149,7 @@
           "Very dissatisfied"
         ],
         "ansType": "radio",
-        "answer": "",
+        "answer": "Neutral",
         "key": "q2"
       },
       "que3": {
@@ -162,27 +162,27 @@
           "Very unsupportive"
         ],
         "ansType": "radio",
-        "answer": "",
+        "answer": "Neutral",
         "key": "q3"
       },
       "que4": {
         "que": "4. Are you satisfied with the teaching staff and their teaching practices?",
         "options": ["Yes", "No"],
         "ansType": "radio",
-        "answer": "",
+        "answer": "No",
         "key": "q4"
       },
       "que5": {
         "que": "5. Do you think your siblings or friends will be benefited by studying at this college?",
         "options": ["Yes", "No", "Not so much", "Can't say"],
         "ansType": "radio",
-        "answer": "",
+        "answer": "No",
         "key": "q5"
       },
       "additional": {
         "que": "Please provide us with additional feedback on areas that need improvement",
         "ansType": "textarea",
-        "answer": ""
+        "answer": "Average"
       }
     },
     {
@@ -198,12 +198,12 @@
       },
       "Email_ID": {
         "que": "Email ID",
-        "ansType": "email",
+        "ansType": "text",
         "answer": ""
       },
       "Department_branch": {
-        "que": "Department / Branch",
-        "ansType": "text",
+        "que": "Department branch",
+        "ansType": "false",
         "answer": ""
       },
       "Section": {
