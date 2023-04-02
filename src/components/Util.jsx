@@ -5,7 +5,7 @@ import FeedbackForm from "./Student/FeedbackForm";
  * @author K. Abdul Salam
  * @param {DOM} password
  * @param {Input type} type
- * @description Its a util function to handle password hide/show
+ * @description Its a util function to handle password on hide/show
  * @returns Input type
  */
 
